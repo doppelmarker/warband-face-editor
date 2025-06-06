@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  backend:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app/app  # Mount app code for hot reload
+      - warband-data:/data
+    environment:
+      - PYTHONUNBUFFERED=1
+      - HOME=/data
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+    restart: unless-stopped
+
+volumes:
+  warband-data:
+    driver: local
