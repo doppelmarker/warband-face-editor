@@ -1,0 +1,33 @@
+# IDE files
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv
+venv/
+.pytest_cache/
+.coverage
+dist/
+build/
+*.egg-info/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Application specific
+uploads/
+temp/
+assets/extracted/
+
+# Node.js (for future frontend)
+node_modules/
+.npm
